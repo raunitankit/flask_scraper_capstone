@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-scraper-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-scraper
+  template:
+    metadata:
+      labels:
+        app: flask-scraper
+    spec:
+      containers:
+      - name: flask-scraper
+        image: raunitankit/flask-scraper-capstone:latest
+        ports:
+        - containerPort: 5100
+

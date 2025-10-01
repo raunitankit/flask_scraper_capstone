@@ -1,0 +1,21 @@
+replicaCount: 3
+
+image:
+  repository: raunitankit/flask-scraper-capstone
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 5100
+
+ingress:
+  enabled: false
+  className: ""
+  hosts:
+    - host: flask.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []

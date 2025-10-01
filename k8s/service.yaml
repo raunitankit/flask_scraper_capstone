@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-scraper-service
+spec:
+  selector:
+    app: flask-scraper
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5100
+  type: NodePort
