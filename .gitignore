@@ -1,8 +1,42 @@
-  __pycache__/
-.pytest_cache/
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
 .venv/
-*.pyc
+venv/
+env/
+ENV/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# Build / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs / Reports
 *.log
+*.out
+*.err
 *.xlsx
-.env
+*.csv
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ---- Project-specific ----
+# prevent personal run instructions from leaking
 how_to_run.txt
