@@ -6,7 +6,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-def scrape_quotes(limit=4):
+def scrape_quotes(limit=5):
     url = "https://quotes.toscrape.com/"
     #url = "https://books.toscrape.com"
     response = requests.get(url) #fetch webpage
