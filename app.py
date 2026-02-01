@@ -4,6 +4,7 @@ from scraper import scrape_quotes, quotes_to_df
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def dashboard():
     quotes = scrape_quotes(limit=10)
